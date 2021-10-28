@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Javascript ES6</title>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header><a href="#What_is_Javascript_ES6?">Javascript ES6</a></header>
+        <ul>
+            <li><a class="nav-link" href="#What_is_Javascript_ES6?">What is Javascript ES6?</a></li>
+            <li><a class="nav-link" href="#JavaScript_let">JavaScript let</a></li>
+            <li><a class="nav-link" href="#JavaScript_const">JavaScript const</a></li>
+            <li><a class="nav-link" href="#Arrow_Functions">Arrow Functions</a></li>
+            <li><a class="nav-link" href="#The_For/Of_Loop">The For/Of Loop</a></li>
+            <li><a class="nav-link" href="#JavaScript_Map_Objects">JavaScript Map Objects</a></li>
+            <li><a class="nav-link" href="#JavaScript_Set_Objects">JavaScript Set Objects</a></li>
+            <li><a class="nav-link" href="#JavaScript_Classes">JavaScript Classes</a></li>
+            <li><a class="nav-link" href="#JavaScript_Promises">JavaScript Promises</a></li>
+            <li><a class="nav-link" href="#The_Symbol_Type">The Symbol Type</a></li>
+            <li><a class="nav-link" href="#Default_Parameter_Values">Default Parameter Values</a></li>
+            <li><a class="nav-link" href="#Function_Rest_Parameter">Function Rest Parameter</a></li>
+            <li><a class="nav-link" href="#String.includes()">String.includes()</a></li>
+            <li><a class="nav-link" href="#String.startsWith()">String.startsWith()</a></li>
+            <li><a class="nav-link" href="#String.endsWith()">String.endsWith()</a></li>
+            <li><a class="nav-link" href="#Array.from()">Array.from()</a></li>
+            <li><a class="nav-link" href="#Array.Keys()">Array.keys()</a></li>
+            <li><a class="nav-link" href="#Array.find()">Array.find()</a></li>
+            <li><a class="nav-link" href="#Array.findIndex()">Array.findIndex()</a></li>
+            <li><a class="nav-link" href="#New_Math_Methods">New Math Methods</a></li>
+            <li><a class="nav-link" href="#The_Math.trunc()_Method">The Math.trunc() Method</a></li>
+            <li><a class="nav-link" href="#The_Math.sign()_Method">The Math.sign() Method</a></li>
+            <li><a class="nav-link" href="#The_Math.cbrt()_Method">The Math.cbrt() Method</a></li>
+            <li><a class="nav-link" href="#The_Math.log2()_Method">The Math.log2() Method</a></li>
+            <li><a class="nav-link" href="#The_Math.log10()_Method">The Math.log10() Method</a></li>
+            <li><a class="nav-link" href="#New_Number_Properties">New Number Properties</a></li>
+            <li><a class="nav-link" href="#New_Number_Methods">New Number Methods</a></li>
+            <li><a class="nav-link" href="#The_Number.isInteger()_Method">The Number.isInteger() Method</a></li>
+            <li><a class="nav-link" href="#The_Number.isSafeInteger()_Method">The Number.isSafeInteger() Method</a></li>
+            <li><a class="nav-link" href="#New_Global_Methods">New Global Methods</a></li>
+            <li><a class="nav-link" href="#The_isFinite()_Method">The isFinite() Method</a></li>
+            <li><a class="nav-link" href="#The_isNaN()_Method">The isNaN() Method</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="What_is_Javascript_ES6?">
+            <header>What is Javascript ES6?</header>
+            <div class="container">
+                <article>
+                    <p>
+                        ECMAScript is the standard that JavaScript programming language uses. ECMAScript provides the specification on how
+                        JavaScript programming language should work.
+                        <br><br>
+                        JavaScript ES6 (also known as <b>ECMAScript 2015</b> or <b>ECMAScript 6</b>) is the newer version of JavaScript that was
+                        introduced in <b>2015</b>.
+                        This update adds significant new syntax for writing complex applications, including class declarations
+                        <code>(class Foo { ... })</code>, ES6 modules like <code style="font-style: normal;">import * as moduleName from "..."; export const Foo</code>, but
+                        defines them semantically in the same terms as ECMAScript 5 strict mode. Other new features include iterators and
+                        <code style="font-style: normal;">for...of</code> loops, Python-style generators, arrow function expression <code style="font-style: normal;">(() => {...})</code>, <code>let</code> keyword for local declarations,
+                        <code>const</code> keyword for constant local declarations, binary data, typed arrays, new collections (maps and sets),
+                        promises, number and math enhancements, and template literals for strings.
+                        
+                        <br><br>
+                        This documentation provides a brief summary of commonly used features of ES6 so that you can start quickly in ES6.
+                    </p>
+                </article>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_let">
+            <header>JavaScript let</header>
+            <div class="container">
+                <p>The <code>let</code> keyword allows you to declare a variable with block scope.</p>
+                <div class="example">
+                    <code>var x = 10;
+<var>// Here x is 10</var>
+{
+    let x = 2;
+    <var>// Here x is 2</var>
+}
+<var>// Here x is 10</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_const">
+            <header>JavaScript const</header>
+            <div class="container">
+                <p>The <code>const</code> keyword allows you to declare a constant (a JavaScript variable with a constant value). 
+                    <br><br>
+                    Constants are similar to let variables, except that the value cannot be changed.
+                </p>
+                <div class="example">
+                    <code>var x = 10;
+<var>// Here x is 10</var>
+{
+    const x = 2;
+    <var>// Here x is 2</var>
+}
+<var>// Here x is 10</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Arrow_Functions">
+            <header>Arrow Functions</header>
+            <div class="container">
+                <p>Arrow functions allows a short syntax for writing function expressions. 
+                    <br><br>
+                    You don't need the <code>function</code> keyword, the <code style="font-style: normal;">return</code> keyword, and the <b>curly brackets</b>.
+                </p>
+                <div class="example">
+                    <code><var>// ES5</var>
+var x = function(x, y) {
+    return x * y;
+}
+                        
+<var>// ES6</var>
+const x = (x, y) => x * y;</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_For/Of_Loop">
+            <header>The For/Of Loop</header>
+            <div class="container">
+                <p>The JavaScript <code style="font-style: normal;">for/of</code> statement loops through the values of an iterable objects.
+                    <br><br>
+                    <code style="font-style: normal;">for/of</code> lets you loop over data structures that are iterable such as Arrays, Strings, Maps, NodeLists, and more. 
+                    <br><br>
+                    The <code style="font-style: normal;">for/of</code> loop has the following syntax: 
+                    <br><br>
+                    <code id="syntax">for (<var>variable of iterable</var>) {
+    <var>// code block to be executed</var>
+}</code>
+                    <br><br>
+                    <var>variable</var> - For every iteration the value of the next property is assigned to the variable. Variable can be declared with <code>const</code>, <code>let</code>, or <code>var</code>. 
+                    <br><br>
+                    <var>iterable</var> - An object that has iterable properties.
+                </p>
+                <h2>Looping over an Array</h2>
+                <div class="example">
+                    <code>const cars = ["BMW", "Volvo", "Mini"];
+let text = "";
+                        
+for (let x of cars) {
+    text += x + " ";
+}</code>
+                </div>
+                <h2>Looping over a String</h2>
+                <div class="example">
+                    <code>let language = "JavaScript";
+let text = "";
+                        
+for (let x of language) {
+    text += x + " ";
+}</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_Map_Objects">
+            <header>JavaScript Map Objects</header>
+            <div class="container">
+                <ul>
+                    <li>A Map holds key-value pairs where the keys can be any datatype.</li>
+                    <li>A Map remembers the original insertion order of the keys.</li>
+                    <li>A Map has a property that represents the size of the map.</li>
+                </ul>
+                <p>
+                    You can create a JavaScript Map by:
+                    <ul>
+                        <li>Passing an Array to <code style="font-style: normal;">new Map()</code></li>
+                        <li>Create a Map and use <code style="font-style: normal;">Map.set()</code></li>
+                    </ul>  
+                </p>
+                <div class="example">
+                    <code><var>// Create Objects</var>
+const apples = {name: 'Apples'};
+const bananas = {name: 'Bananas'};
+const oranges = {name: 'Oranges'};
+                        
+<var>// Create a new Map</var>
+const fruits = new Map();
+                        
+<var>// Add new Elements to the Map</var>
+fruits.set(apples, 500);
+fruits.set(bananas, 300);
+fruits.set(oranges, 200);</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_Set_Objects">
+            <header>JavaScript Set Objects</header>
+            <div class="container">
+                <ul>
+                    <li>A JavaScript Set is a collection of unique values.</li>
+                    <li>Each value can only occur once in a Set.</li>
+                    <li>A Set can hold any value of any data type.</li>
+                </ul>
+                <p>
+                    You can create a JavaScript Set by:
+                    <ul>
+                        <li>Passing an Array to <code style="font-style: normal;">new Set()</code></li>
+                        <li>Create a new Set and use <code style="font-style: normal;">add()</code> to add values</li>
+                        <li>Create a new Set and use <code style="font-style: normal;">add()</code> to add variables</li>
+                    </ul>  
+                </p>
+                <div class="example">
+                    <code><var>// Create a Set</var>
+const letters = new Set();
+                        
+<var>// Add some values to the Set</var>
+letters.add("a");
+letters.add("b");
+letters.add("c");</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_Classes">
+            <header>JavaScript Classes</header>
+            <div class="container">
+                <p>
+                    JavaScript Classes are templates for JavaScript Objects. <br><br>
+                    Use the keyword <code>class</code> to create a class. <br><br>
+                    Always add a method named <code style="font-style: normal;">constructor()</code>:
+                    <br><br>
+                    <code id="syntax">class ClassName {
+    constructor() { ... }
+}</code>
+
+                </p>
+                <h3>Example:</h3>
+                <div class="example">
+                    <code>class Car {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+}</code>
+                </div>
+                <p>
+                    The example above creates a class named "Car". <br><br>
+                    The class has two initial properties: "name" and "year".
+                </p>
+                <div id="note">
+                    <h3>Remember:</h3>
+                    <p>
+                        A JavaScript class is <b>not</b> an object.<br><br>
+                        It is a <b>template</b> for JavaScript objects.
+                    </p>
+                </div>
+                <br>
+                <h2>Using a Class</h2>
+                <p>When you have a class, you can use the class to create objects:</p>
+                <div class="example">
+                    <code>const myCar1 = new Car("Ford", 2014);
+const myCar2 = new Car("Audi", 2019); </code>
+                </div>
+
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="JavaScript_Promises">
+            <header>JavaScript Promises</header>
+            <div class="container">
+                <p>
+                    A Promise is a JavaScript object that links "Producing Code" and "Consuming Code". <br><br>
+                    "Producing Code" can take some time and "Consuming Code" must wait for the result.
+                    <h3>Syntax:</h3>
+<code id="syntax">const myPromise = new Promise(function(myResolve, myReject) {
+    <var>// "Producing Code" (May take some time)</var>
+                        
+    myResolve(); <var>// when successful</var>
+    myReject();  <var>// when error</var>
+});
+                        
+// "Consuming Code" (Must wait for a fulfilled Promise).
+myPromise.then(
+    function(value) { <var>/* code if successful */</var> },
+    function(error) { <var>/* code if some error */</var> }
+);</code>
+                <h3>Example:</h3>
+                <div class="example">
+<code>const myPromise = new Promise(function(myResolve, myReject) {
+    setTimeout(function() { myResolve("I love dogs!"); }, 3000);
+});
+  
+myPromise.then(function(value) {
+    document.getElementById("demo").innerHTML = value;
+});</code>
+                </div>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Symbol_Type">
+            <header>The Symbol Type</header>
+            <div class="container">
+                <p>
+                    A JavaScript Symbol is a primitive datatype just like Number, String, or Boolean. <br><br>
+                    It represents a unique "hidden" identifier that no other code can accidentally access. <br><br>
+                    For instance, if different coders want to add a person.id property to a person object belonging to a third-party code, they could mix each others values. <br><br>
+                    Using <code style="font-style: normal;">Symbol()</code> to create a unique identifiers, solves this problem:
+                </p>
+                <div class="example">
+<code>const person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+};
+  
+let id = Symbol('id');
+person[id] = 140353;
+<var>// Now Person[id] = 140353</var>
+<var>// but person.id is still undefined</var></code>
+                </div>
+                <br><br>
+                <div id="note">
+                    <h3>Remember:</h3>
+                    <p>
+                        Symbols are always unique.<br><br>
+                        If you create two symbols with the same description they will have different values.
+                    </p>
+                </div>
+                <code id="note-code">Symbol("id") == Symbol("id") <var>// false</var></code>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Default_Parameter_Values">
+            <header>Default Parameter Values</header>
+            <div class="container">
+                <p>ES6 allows function parameters to have default values.</p>
+                <div class="example">
+<code>function myFunction(x, y = 10) {
+    <var>// y is 10 if not passed or undefined</var>
+    return x + y;
+}
+myFunction(5); <var>// will return 15</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Function_Rest_Parameter">
+            <header>Function Rest Parameter</header>
+            <div class="container">
+                <p>The rest parameter <code style="font-style: normal;">(...)</code> allows a function to treat an indefinite number of arguments as an array:</p>
+                <div class="example">
+<code>function sum(...args) {
+    let sum = 0;
+    for (let arg of args) sum += arg;
+    return sum;
+}
+  
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="String.includes()">
+            <header>String.includes()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">includes()</code> method returns <code style="font-style: normal;">true</code>
+                    if a string contains a specified value, otherwise <code style="font-style: normal;">false</code>:</p>
+                <div class="example">
+<code>let text = "Hello world, welcome to the universe.";
+text.includes("world")    <var>// Returns true</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="String.startsWith()">
+            <header>String.startsWith()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">startsWith()</code> method returns <code style="font-style: normal;">true</code>
+                    if a string begins with a specified value, otherwise <code style="font-style: normal;">false</code>:</p>
+                <div class="example">
+<code>let text = "Hello world, welcome to the universe.";
+text.startsWith("Hello")    <var>// Returns true</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="String.endsWith()">
+            <header>String.endsWith()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">endsWith()</code> method returns <code style="font-style: normal;">true</code>
+                    if a string ends with a specified value, otherwise <code style="font-style: normal;">false</code>:</p>
+                <div class="example">
+<code>var text = "John Doe";
+text.endsWith("Doe")    <var>// Returns true</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Array.from()">
+            <header>Array.from()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">Array.from()</code> method returns an Array object from any object with a
+                    length property or any iterable object.</p>
+                <div class="example">
+                    Create an Array from a String:<br>
+<code>Array.from("ABCDEFG")    <var>// Returns [A,B,C,D,E,F,G]</var></code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Array.Keys()">
+            <header>Array.Keys()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">Array.Keys()</code> method returns an Array Iterator object with the keys of an array.</p>
+                <div class="example">
+<code>const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const keys = fruits.keys();
+    
+let text = "";
+for (let x of keys) {
+    text += x + "<br>";
+}</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Array.find()">
+            <header>Array.find()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">find()</code> method returns the value of the first array element that passes a test function.
+                <br><br>
+                This example finds (returns the value of ) the first element that is larger than 18:
+                </p>
+                <div class="example">
+<code>const numbers = [4, 9, 16, 25, 29];
+let first = numbers.find(myFunction);
+    
+function myFunction(value, index, array) {
+    return value > 18;
+}</code>
+                </div>
+                <p>
+                    Note that the function takes 3 arguments:
+                    <ul>
+                        <li>The item value</li>
+                        <li>The item index</li>
+                        <li>The array itself</li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="Array.findIndex()">
+            <header>Array.findIndex()</header>
+            <div class="container">
+                <p>The <code style="font-style: normal;">findIndex()</code> returns the index of the first array element that passes a test function.
+                <br><br>
+                This example finds the index of the first element that is larger than 18:
+                </p>
+                <div class="example">
+<code>const numbers = [4, 9, 16, 25, 29];
+let first = numbers.findIndex(myFunction);
+    
+function myFunction(value, index, array) {
+    return value > 18;
+}</code>
+                </div>
+                <p>
+                    Note that the function takes 3 arguments:
+                    <ul>
+                        <li>The item value</li>
+                        <li>The item index</li>
+                        <li>The array itself</li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="New_Math_Methods">
+            <header>New Math Methods</header>
+            <div class="container">
+                <p>ES6 added the following methods to the Math object:
+                    <ul>
+                        <li><a href="#The_Math.trunc()_Method"><code style="font-style: normal;">Math.trunc()</code></a></li>
+                        <li><a href="#The_Math.sign()_Method"><code style="font-style: normal;">Math.sign()</code></a></li>
+                        <li><a href="#The_Math.cbrt()_Method"><code style="font-style: normal;">Math.cbrt()</code></a></li>
+                        <li><a href="#The_Math.log2()_Method"><code style="font-style: normal;">Math.log2()</code></a></li>
+                        <li><a href="#The_Math.log10()_Method"><code style="font-style: normal;">Math.log10()</code></a></li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Math.trunc()_Method">
+            <header>The Math.trunc() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Math.trunc(x)</code> returns the integer part of x:</p>
+                <div class="example">
+<code>Math.trunc(4.9);    <var>// returns 4</var>
+Math.trunc(4.7);    <var>// returns 4</var>
+Math.trunc(4.4);    <var>// returns 4</var>
+Math.trunc(4.2);    <var>// returns 4</var>
+Math.trunc(-4.2);    <var>// returns -4</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Math.sign()_Method">
+            <header>The Math.sign() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Math.sign(x)</code> returns if x is negative, null or positive:</p>
+                <div class="example">
+<code>Math.sign(-4);    <var>// returns -1</var>
+Math.sign(0);    <var>// returns 0</var>
+Math.sign(4);    <var>// returns 1</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Math.cbrt()_Method">
+            <header>The Math.cbrt() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Math.cbrt(x)</code> returns the cube root of x:</p>
+                <div class="example">
+<code>Math.cbrt(8);    <var>// returns 2</var>
+Math.cbrt(64);    <var>// returns 4</var>
+Math.cbrt(125);    <var>// returns 5</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Math.log2()_Method">
+            <header>The Math.log2() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Math.log2(x)</code> returns the base 2 logarithm of x:</p>
+                <div class="example">
+<code>Math.log2(2);    <var>// returns 1</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Math.log10()_Method">
+            <header>The Math.log10() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Math.log10(x)</code> returns the base 10 logarithm of x:</p>
+                <div class="example">
+<code>Math.log10(10);    <var>// returns 1</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="New_Number_Properties">
+            <header>New Number Properties</header>
+            <div class="container">
+                <p>ES6 added the following properties to the Number object:
+                    <ul>
+                        <li><code style="font-style: normal;">EPSILON</code></li>
+                        <li><code style="font-style: normal;">MIN_SAFE_INTEGER</code></li>
+                        <li><code style="font-style: normal;">MAX_SAFE_INTEGER</code></li>
+                    </ul>
+                </p>
+                <div class="example">
+                    <code>let x = Number.EPSILON;</code>
+                </div>
+                <br>
+                <div class="example">
+                    <code>let x = Number.MIN_SAFE_INTEGER;</code>
+                </div>
+                <br>
+                <div class="example">
+                    <code>let x = Number.MAX_SAFE_INTEGER;</code>
+                </div>
+                <br><br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="New_Number_Methods">
+            <header>New Number Methods</header>
+            <div class="container">
+                <p>ES6 added 2 new methods to the Number object:
+                    <ul>
+                        <li><a href="#The_Number.isInteger()_Method"><code style="font-style: normal;">Number.isInteger()</code></a></li>
+                        <li><a href="#The_Number.isSafeInteger()_Method"><code style="font-style: normal;">Number.isSafeInteger()</code></a></li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Number.isInteger()_Method">
+            <header>The Number.isInteger() Method</header>
+            <div class="container">
+                <p><code style="font-style: normal;">Number.isInteger()</code> method returns <code style="font-style: normal;">true</code> if the argument is an integer.</p>
+                <div class="example">
+<code>Number.isInteger(10);        <var>// returns true</var>
+Number.isInteger(10.5);      <var>// returns false</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_Number.isSafeInteger()_Method">
+            <header>The Number.isSafeInteger() Method</header>
+            <div class="container">
+                <p>
+                    A safe integer is an integer that can be exactly represented as a double precision number. <br><br>
+                    The <code style="font-style: normal;">Number.isSafeInteger()</code> method returns <code style="font-style: normal;">true</code> if the argument is a safe integer.</p>
+                <div class="example">
+<code>Number.isSafeInteger(10);        <var>// returns true</var>
+Number.isSafeInteger(12345678901234567890);      <var>// returns false</var></code>
+                </div>
+                <br>
+                <div id="note">
+                    <h3>Remember:</h3>
+                    <p>
+                        Safe integers are all integers from -(2<sub>53</sub> - 1) to +(2<sub>53</sub> - 1).<br><br>
+                        This is safe: 9007199254740991. This is not safe: 9007199254740992.
+                    </p>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="New_Global_Methods">
+            <header>New Global Methods</header>
+            <div class="container">
+                <p>ES6 added 2 new global number methods:
+                    <ul>
+                        <li><a href="#The_isFinite()_Method"><code style="font-style: normal;">isFinite()</code></a></li>
+                        <li><a href="#The_isNaN()_Method"><code style="font-style: normal;">isNaN()</code></a></li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_isFinite()_Method">
+            <header>The isFinite() Method</header>
+            <div class="container">
+                <p>The global <code style="font-style: normal;">isFinite()</code> method returns <code
+                        style="font-style: normal;">false</code> if the argument is <code style="font-style: normal;">Infinity</code> or
+                    <code style="font-style: normal;">NaN</code>. <br><br>
+                    Otherwise it returns <code style="font-style: normal;">true</code>:
+                </p>
+                <div class="example">
+<code>isFinite(10/0);        <var>// returns false</var>
+isFinite(10/1);      <var>// returns true</var></code>
+                </div>
+                <br>
+                <hr>
+            </div>
+        </section>
+        <section class="main-section" id="The_isNaN()_Method">
+            <header>The isNaN() Method</header>
+            <div class="container">
+                <p>The global <code style="font-style: normal;">isNaN()</code> method returns <code
+                        style="font-style: normal;">true</code> if the argument is <code style="font-style: normal;">NaN</code>. 
+                    Otherwise it returns <code style="font-style: normal;">false</code>:
+                </p>
+                <div class="example">
+                    <code>isNaN("Hello");        <var>// returns true</var></code>
+                </div>
+                <br><br>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            All the documentation in this page is taken from <a href="https://www.w3schools.com/js/js_es6.asp" target="_blank">W3Schools</a>.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,246 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    color: #333333;
+}
+
+body {
+    margin: 0;
+}
+
+hr {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    border: 1px solid lightgrey;
+}
+
+#navbar header {
+    height: auto;
+    padding: 25px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    background-color: lightgrey;
+    
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+
+#navbar {
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    min-width: 300px;
+    width: 300px;
+    height: 100%;
+    border-right: 1px solid;
+    border-color: lightgrey;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#navbar ul {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+#navbar li {
+    position: relative;
+    border-top: 1px solid;
+    border-color: lightgrey;
+    width: 100%;
+}
+#navbar li:hover {
+    background-color: rgba(211, 211, 211, 0.322);
+}
+
+.nav-link {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    color: #5f5f5f;
+    padding: 20px 25px;
+}
+.nav-link:hover {
+    color:darkmagenta;
+}
+
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-section {
+    margin-left: 300px;
+}
+
+
+.main-section header {
+    margin: 0 auto;
+    max-width: 90%;
+    width: 100%;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: left;
+    color: black;
+}
+
+.main-section p {
+    font-size: 1.2rem;
+    padding-bottom: 20px;
+}
+
+.main-section code {
+    display: inline-block;
+    text-align: left;
+    white-space: pre-line;
+    word-break: normal;
+    word-wrap: normal;
+    background-color: #f7f7f7;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-style: italic;
+    color: darkmagenta;
+}
+
+.main-section li {
+    font-size: 1.2rem;
+}
+
+.example {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    justify-content: center;
+    padding: 40px 15px 40px 15px;
+}
+
+
+.example code{
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    border-left: 3px solid darkmagenta;
+    background-color: white;
+    font-style: normal;
+    padding: 15px;
+    margin: 10px;
+    color: darkmagenta;
+}
+
+#syntax {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    background-color: transparent;
+    border-left: 3px solid darkmagenta;
+    background-color: #f7f7f7;
+    font-style: normal;
+    font-size: 0.9rem;
+    padding: 15px;
+    color: darkmagenta;
+}
+
+#note {
+    background-color: lightyellow;
+    height: auto;
+    padding-left: 25px;
+    padding-top: 5px;
+}
+
+#note p{
+    font-size: 1rem;
+}
+
+#note-code {
+    padding: 10px; 
+    border-left: 3px solid darkmagenta; 
+    background-color: #f7f7f7;
+    font-style: normal;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.footer {
+    height: auto;
+    background-color: lightgrey;
+    display: block;
+    bottom: 0px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 300px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1020px){
+    #navbar ul {
+        height: 40%;
+        padding: 0px;
+        margin: 0px;
+    }
+    #navbar li {
+        text-align: center;
+    }
+    
+    #navbar {
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 40%;
+        border: none;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+    #main-doc {
+        position: relative;
+        margin-left: 0px;
+        margin-top: 300px;
+    }
+    .main-section {
+        margin-left: 0px;
+    }
+
+    .footer {
+        margin-left: 0px;
+    }
+    
+}
+
+@media screen and (max-width: 535px){
+    #navbar {
+        max-height: 40%;
+    }
+    #syntax {
+        white-space: pre-wrap;
+    }
+    .example code {
+        white-space: pre-wrap;
+    }
+    #note {
+        padding: 10px;
+    }
+
+
+}
